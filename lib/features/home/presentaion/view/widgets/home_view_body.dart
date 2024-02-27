@@ -20,14 +20,21 @@ class HomeViewBody extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: customAppBar(),
-          body: const Column(
-            children: [
-              CustomSearchBar(),
-              CategoryBar(),
-              PopularShoes(),
-              Spacer(),
-              NewArrivals(),
-              SizedBox(height: 106)
+          body: const CustomScrollView(
+            physics: BouncingScrollPhysics(),
+            slivers: [
+              SliverToBoxAdapter(
+                child: Column(
+                  children: [
+                    CustomSearchBar(),
+                    NewArrivals(),
+                    CategoryBar(),
+                  ],
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: PopularShoes(),
+              )
             ],
           ),
         );

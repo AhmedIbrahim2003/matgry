@@ -45,20 +45,19 @@ class PopularShoes extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
-                height: 200,
-                child: ListView.builder(
-                  itemBuilder: (context, index) => Row(
-                    children: [
-                      const ItemCard(),
-                      SizedBox(
-                        width: size.width / 15,
-                      )
-                    ],
-                  ),
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 5,
+              GridView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 15,
+                  mainAxisSpacing: 20,
+                  childAspectRatio: 2 / 2.4,
                 ),
+                itemCount: 9,
+                itemBuilder: (context, index) {
+                  return const ItemCard();
+                },
               )
             ],
           ),
