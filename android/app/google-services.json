@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "112194981221",
+    "project_id": "nike-sneaker-store",
+    "storage_bucket": "nike-sneaker-store.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112194981221:android:fff5e14bf4b78a2c68258c",
+        "android_client_info": {
+          "package_name": "com.example.nike_shop_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112194981221-tkll578cveatnu9b8q660ts28fl9sc7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nike_shop_app",
+            "certificate_hash": "cef312e0a5894937259fee4630a171f60aa7d6d2"
+          }
+        },
+        {
+          "client_id": "112194981221-bjfkrlntvmvua2koj0s7lsd2ic4650jn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE_mxJgLTlum0TBz9N6XrDQHQ1F46oGjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112194981221-bjfkrlntvmvua2koj0s7lsd2ic4650jn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
