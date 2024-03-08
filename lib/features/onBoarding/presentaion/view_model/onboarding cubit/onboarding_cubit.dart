@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nike_shop_app/constant.dart';
-import 'package:nike_shop_app/core/utils/cache_helper.dart';
-import 'package:nike_shop_app/features/onBoarding/presentaion/view/widgets/onboarding_screen_1.dart';
-import 'package:nike_shop_app/features/onBoarding/presentaion/view/widgets/onboarding_screen_2.dart';
-import 'package:nike_shop_app/features/onBoarding/presentaion/view/widgets/onboarding_screen_3.dart';
+import 'package:matgry/constant.dart';
+import 'package:matgry/core/utils/cache_helper.dart';
+import 'package:matgry/features/onBoarding/presentaion/view/widgets/onboarding_screen_1.dart';
+import 'package:matgry/features/onBoarding/presentaion/view/widgets/onboarding_screen_2.dart';
+import 'package:matgry/features/onBoarding/presentaion/view/widgets/onboarding_screen_3.dart';
 
 import '../../../../auth/presentaion/register/view/register_view.dart';
 import 'onboarding_states.dart';

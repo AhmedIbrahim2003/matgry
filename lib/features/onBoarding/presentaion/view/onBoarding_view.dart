@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nike_shop_app/features/onBoarding/presentaion/view_model/onboarding%20cubit/onboarding_cubit.dart';
+import 'package:matgry/features/onBoarding/presentaion/view_model/onboarding%20cubit/onboarding_cubit.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../constant.dart';

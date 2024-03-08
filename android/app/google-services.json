@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:112194981221:android:fff5e14bf4b78a2c68258c",
         "android_client_info": {
-          "package_name": "com.example.nike_shop_app"
+          "package_name": "com.example.matgry"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "112194981221-tkll578cveatnu9b8q660ts28fl9sc7b.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.nike_shop_app",
+            "package_name": "com.example.matgry",
             "certificate_hash": "cef312e0a5894937259fee4630a171f60aa7d6d2"
           }
         },

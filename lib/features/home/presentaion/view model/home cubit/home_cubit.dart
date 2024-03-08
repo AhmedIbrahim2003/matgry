@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nike_shop_app/core/utils/dio_helper.dart';
-import 'package:nike_shop_app/features/favourite/presentaion/view/favourite_screen.dart';
-import 'package:nike_shop_app/features/home/presentaion/view/widgets/home_view_body.dart';
+import 'package:matgry/core/utils/dio_helper.dart';
+import 'package:matgry/features/favourite/presentaion/view/favourite_screen.dart';
+import 'package:matgry/features/home/presentaion/view/widgets/home_view_body.dart';
 
 import '../../../../../core/utils/end_points.dart';
-import '../../../model/home_model/home_model.dart';
+import '../../../model/home_model/home_data_model.dart';
 import 'home_states.dart';
 
 class HomeCubit extends Cubit<HomeStates> {
@@ -28,11 +28,13 @@ class HomeCubit extends Cubit<HomeStates> {
 
   HomeModel homeModel = HomeModel();
 
-  void getCategories() {
+  void getHomeData() {
+    emit((GetHomeDataLoadingState()));
     DioHelper.getData(
-      url: endPoints.categories,
+      url: endPoints.home,
     ).then((value) {
       homeModel = HomeModel.fromJson(value.data);
+    emit((GetHomeDataSuccessState()));
       print(homeModel);
     });
   }

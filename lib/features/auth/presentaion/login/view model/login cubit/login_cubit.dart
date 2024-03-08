@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nike_shop_app/core/utils/dio_helper.dart';
+import 'package:matgry/core/utils/dio_helper.dart';
 
 import '../../../../../../core/utils/cache_helper.dart';
 import '../../../../../../core/utils/end_points.dart';

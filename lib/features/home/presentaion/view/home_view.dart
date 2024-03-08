@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nike_shop_app/features/home/presentaion/view%20model/home%20cubit/home_states.dart';
+import 'package:matgry/features/home/presentaion/view%20model/home%20cubit/home_states.dart';
 
 import '../../../../constant.dart';
 import '../view model/home cubit/home_cubit.dart';
@@ -12,7 +12,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => HomeCubit()..getCategories(),
+      create: (context) => HomeCubit()..getHomeData(),
       child: BlocConsumer<HomeCubit, HomeStates>(
         listener: (context, state) {},
         builder: (context, state) {

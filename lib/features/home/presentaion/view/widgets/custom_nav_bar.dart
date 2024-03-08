@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nike_shop_app/constant.dart';
-import 'package:nike_shop_app/features/home/presentaion/view%20model/home%20cubit/home_cubit.dart';
+import 'package:matgry/constant.dart';
+import 'package:matgry/features/home/presentaion/view%20model/home%20cubit/home_cubit.dart';
 
 import '../../../../../gen/assets.gen.dart';
 import '../../view model/home cubit/home_states.dart';

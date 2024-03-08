@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
 
-import 'package:nike_shop_app/features/auth/presentaion/register/view/register_view.dart';
+import 'package:matgry/features/auth/presentaion/register/view/register_view.dart';
 
 import '../../../../../constant.dart';
 import '../../../../../gen/assets.gen.dart';

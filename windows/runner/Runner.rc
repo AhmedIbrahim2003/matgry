@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "nike_shop_app" "\0"
+            VALUE "FileDescription", "matgry" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "nike_shop_app" "\0"
+            VALUE "InternalName", "matgry" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "nike_shop_app.exe" "\0"
-            VALUE "ProductName", "nike_shop_app" "\0"
+            VALUE "OriginalFilename", "matgry.exe" "\0"
+            VALUE "ProductName", "matgry" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

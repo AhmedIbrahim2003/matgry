@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:nike_shop_app/constant.dart';
-import 'package:nike_shop_app/features/auth/presentaion/recover%20password/view/widget/recover_password_view_body.dart';
+import 'package:matgry/constant.dart';
+import 'package:matgry/features/auth/presentaion/recover%20password/view/widget/recover_password_view_body.dart';
 
 class RecoverPasswordView extends StatelessWidget {
   const RecoverPasswordView({super.key});

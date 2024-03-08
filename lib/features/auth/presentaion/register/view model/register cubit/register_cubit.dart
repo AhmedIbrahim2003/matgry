@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:nike_shop_app/core/utils/cache_helper.dart';
-import 'package:nike_shop_app/core/utils/dio_helper.dart';
-import 'package:nike_shop_app/core/utils/end_points.dart';
-import 'package:nike_shop_app/features/auth/presentaion/register/view%20model/register%20cubit/register_states.dart';
+import 'package:matgry/core/utils/cache_helper.dart';
+import 'package:matgry/core/utils/dio_helper.dart';
+import 'package:matgry/core/utils/end_points.dart';
+import 'package:matgry/features/auth/presentaion/register/view%20model/register%20cubit/register_states.dart';
 
 class RegisterCubit extends Cubit<RegisterStates> {
   RegisterCubit() : super(RegisterInitialState());

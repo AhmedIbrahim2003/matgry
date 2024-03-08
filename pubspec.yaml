@@ -1,4 +1,4 @@
-name: nike_shop_app
+name: matgry
 description: A new Flutter project.
 publish_to: 'none'
 version: 0.1.0
@@ -9,11 +9,8 @@ environment:
 dependencies:
   awesome_snackbar_content: ^0.1.3
   blur: ^3.1.0
-  cloud_firestore: ^4.8.4
   custom_flutter_painter: ^1.0.1
   dio: ^5.4.1
-  firebase_auth: ^4.7.2
-  firebase_core: ^2.15.0
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3
@@ -21,7 +18,6 @@ dependencies:
   flutter_svg: ^2.0.7
   get_it: ^7.6.0
   google_fonts: ^5.1.0
-  google_sign_in: ^6.1.4
   hexcolor: ^3.0.1
   icons_plus: ^4.0.0
   pin_code_fields: ^8.0.1

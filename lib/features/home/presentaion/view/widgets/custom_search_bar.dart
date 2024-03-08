@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nike_shop_app/gen/assets.gen.dart';
+import 'package:matgry/gen/assets.gen.dart';
 
 import '../../../../../constant.dart';
 import '../../../../search/presentation/view/search_view.dart';

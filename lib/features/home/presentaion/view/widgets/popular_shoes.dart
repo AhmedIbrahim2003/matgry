@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nike_shop_app/constant.dart';
+import 'package:matgry/constant.dart';
 
 import '../../../../../gen/fonts.gen.dart';
 import 'popular_shoes_item_card.dart';
@@ -9,7 +9,6 @@ class PopularShoes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.sizeOf(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Stack(

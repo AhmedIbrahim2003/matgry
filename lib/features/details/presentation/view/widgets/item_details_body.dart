@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:nike_shop_app/gen/assets.gen.dart';
-import 'package:nike_shop_app/gen/fonts.gen.dart';
+import 'package:matgry/gen/assets.gen.dart';
+import 'package:matgry/gen/fonts.gen.dart';
 
 import '../../../../../constant.dart';
 import 'details_custom_appbar.dart';

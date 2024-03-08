@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nike_shop_app/gen/assets.gen.dart';
+import 'package:matgry/gen/assets.gen.dart';
 import 'package:sizer/sizer.dart';
 
 class OnBoardingScreen1 extends StatelessWidget {

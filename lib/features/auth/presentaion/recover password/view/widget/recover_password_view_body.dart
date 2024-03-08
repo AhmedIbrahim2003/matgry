@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:nike_shop_app/features/auth/presentaion/recover%20password/view%20model/forget%20password%20cubit/forget_password_cubit.dart';
+import 'package:matgry/features/auth/presentaion/recover%20password/view%20model/forget%20password%20cubit/forget_password_cubit.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../../../constant.dart';

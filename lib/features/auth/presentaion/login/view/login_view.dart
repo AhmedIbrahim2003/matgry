@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nike_shop_app/features/auth/presentaion/login/view/widget/login_view_body.dart';
+import 'package:matgry/features/auth/presentaion/login/view/widget/login_view_body.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});

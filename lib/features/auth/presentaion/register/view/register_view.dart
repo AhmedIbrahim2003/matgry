@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nike_shop_app/features/auth/presentaion/register/view/widget/register_view_body.dart';
+import 'package:matgry/features/auth/presentaion/register/view/widget/register_view_body.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({super.key});
