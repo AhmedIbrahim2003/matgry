@@ -3,4 +3,6 @@ class EndPoints {
   String login = 'login';
   String categories = 'categories';
   String home = 'home';
+  String favorite = 'favorites';
+  String cart = 'carts';
 }

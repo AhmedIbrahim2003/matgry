@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:matgry/core/utils/cache_helper.dart';
 import 'package:matgry/core/utils/dio_helper.dart';
-import 'package:matgry/features/home/presentaion/view/home_view.dart';
+import 'package:matgry/features/splash/presentation/view/splash_view.dart';
 import 'package:sizer/sizer.dart';
 
 import 'bloc_observer.dart';
@@ -11,8 +11,8 @@ import 'bloc_observer.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Bloc.observer = MyBlocObserver();
-  await DioHelper.init();
   await CacheHelper.init();
+  await DioHelper.init();
   var showOnboarding =
       await CacheHelper.getData(key: 'OnBoardingScreenShownOnce') ?? true;
 
@@ -34,7 +34,7 @@ class MainApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily: 'Raleway',
           ),
-          home: const HomeView(),
+          home: SplashView(showOnboarding: showOnboarding,),
         );
       },
     );

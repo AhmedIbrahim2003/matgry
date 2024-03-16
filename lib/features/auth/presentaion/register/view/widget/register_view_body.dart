@@ -2,7 +2,7 @@ import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:matgry/features/auth/presentaion/register/view%20model/register%20cubit/register_states.dart';
-import 'package:matgry/features/home/presentaion/view/home_view.dart';
+import 'package:matgry/features/home/presentaion/view/main_page.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../../../constant.dart';
@@ -47,7 +47,7 @@ class RegisterViewBody extends StatelessWidget {
           } else if (state is RegisterSuccessState ||
               state is RegisterWithGoogleSuccessState) {
             myPushReplacmentNavigator(
-                context: context, destination: const HomeView());
+                context: context, destination: const MainPage());
           }
         },
         builder: (context, state) {

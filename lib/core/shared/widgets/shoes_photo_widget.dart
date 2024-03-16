@@ -8,29 +8,22 @@ class ShoesPhotoWidget extends StatelessWidget {
     required this.photoPath,
     this.width = 120,
     this.height = 70,
-    this.rotation = -0.30,
-    this.padding = const EdgeInsets.only(right: 16),
+    this.padding = const EdgeInsets.only(right: 0),
   });
 
   String photoPath;
   double width;
   double height;
-  double rotation;
   EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
-    return Transform(
-      transform: Matrix4.identity()
-        ..translate(-3.5)
-        ..rotateZ(rotation),
-      child: Padding(
-        padding: padding,
-        child: Image.asset(
-          photoPath,
-          width: width,
-          height: height,
-        ),
+    return Padding(
+      padding: padding,
+      child: Image.network(
+        photoPath,
+        width: width,
+        height: height,
       ),
     );
   }

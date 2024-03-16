@@ -16,11 +16,6 @@ class DataModel {
   }
 }
 
-
-
-
-
-
 /* DataModel(
         banners: (json['banners'])
             ?.map((e) => BannerModel.fromJson(e as Map<String, dynamic>))

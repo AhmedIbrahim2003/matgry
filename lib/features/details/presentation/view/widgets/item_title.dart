@@ -3,17 +3,18 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../../gen/fonts.gen.dart';
+import '../../../../home/model/home_model/product_model.dart';
 
-class ShoesTitle extends StatelessWidget {
-  const ShoesTitle({super.key});
-
+class ItemTitle extends StatelessWidget {
+  const ItemTitle({super.key, required this.product});
+  final ProductModel product;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Nike Air Max 270 Essential',
+          product.name!,
           style: TextStyle(
             fontFamily: FontFamily.raleway,
             fontWeight: FontWeight.bold,
@@ -23,7 +24,7 @@ class ShoesTitle extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8),
           child: Text(
-            'Men\'s Shoes',
+            'Best Seller',
             style: TextStyle(
               fontFamily: FontFamily.raleway,
               fontWeight: FontWeight.w500,
@@ -33,7 +34,7 @@ class ShoesTitle extends StatelessWidget {
           ),
         ),
         Text(
-          '\$179.39',
+          '${product.price} E£',
           style: TextStyle(
             fontFamily: FontFamily.poppins,
             fontWeight: FontWeight.w600,

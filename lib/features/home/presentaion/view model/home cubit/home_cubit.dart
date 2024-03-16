@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:matgry/core/utils/dio_helper.dart';
 import 'package:matgry/features/favourite/presentaion/view/favourite_screen.dart';
-import 'package:matgry/features/home/presentaion/view/widgets/home_view_body.dart';
+import 'package:matgry/features/home/presentaion/view/widgets/home_screen.dart';
 
 import '../../../../../core/utils/end_points.dart';
+import '../../../model/categories_model/categories/categories_model.dart';
 import '../../../model/home_model/home_data_model.dart';
 import 'home_states.dart';
 
@@ -15,7 +16,7 @@ class HomeCubit extends Cubit<HomeStates> {
 
   int bottomNavIndex = 0;
   List<Widget> pages = [
-    const HomeViewBody(),
+    const HomeScreen(),
     const FavouriteScreen(),
     const Center(child: Text('Notification Screen')),
     const Center(child: Text('Profile Screen')),
@@ -26,16 +27,46 @@ class HomeCubit extends Cubit<HomeStates> {
     emit(BottomNavBarIndexChangeState());
   }
 
-  HomeModel homeModel = HomeModel();
+  HomeModel homeData = HomeModel();
+  CategoriesModel categoriesData = CategoriesModel();
 
-  void getHomeData() {
+  void getHomeFullData() async {
     emit((GetHomeDataLoadingState()));
-    DioHelper.getData(
+    await _getHomeData();
+    await _getCategoriesData();
+    emit(GetHomeDataSuccessState());
+  }
+
+  Future<void> _getHomeData() async {
+    await DioHelper.getData(
       url: endPoints.home,
+    ).then((value) async {
+      homeData = HomeModel.fromJson(value.data);
+    });
+  }
+
+  Future<void> _getCategoriesData() async {
+    await DioHelper.getData(
+      url: endPoints.categories,
     ).then((value) {
-      homeModel = HomeModel.fromJson(value.data);
-    emit((GetHomeDataSuccessState()));
-      print(homeModel);
+      categoriesData = CategoriesModel.fromJson(value.data);
+    });
+  }
+
+  void changeFavoriteState({required int productID}) {
+    DioHelper.postData(
+      url: endPoints.favorite,
+      data: {'product_id': productID},
+    ).then((value) {}).catchError((e) {
+      emit(ChangeFavoriteErrorState(error: e));
+    });
+  }
+  void addOrRemoveFromCart({required int productID}) {
+    DioHelper.postData(
+      url: endPoints.cart,
+      data: {'product_id': productID},
+    ).then((value) {}).catchError((e) {
+      emit(ChangeFavoriteErrorState(error: e));
     });
   }
 }

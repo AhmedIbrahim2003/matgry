@@ -5,8 +5,8 @@ import 'package:matgry/gen/assets.gen.dart';
 import '../../../../../constant.dart';
 import '../../../../search/presentation/view/search_view.dart';
 
-class CustomSearchBar extends StatelessWidget {
-  const CustomSearchBar({super.key});
+class HomeCustomSearchBar extends StatelessWidget {
+  const HomeCustomSearchBar({super.key});
 
   @override
   Widget build(BuildContext context) {

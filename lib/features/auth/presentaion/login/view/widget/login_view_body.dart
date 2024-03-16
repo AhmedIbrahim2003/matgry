@@ -7,7 +7,7 @@ import 'package:matgry/features/auth/presentaion/register/view/register_view.dar
 import 'package:sizer/sizer.dart';
 
 import '../../../../../../constant.dart';
-import '../../../../../home/presentaion/view/home_view.dart';
+import '../../../../../home/presentaion/view/main_page.dart';
 import '../../../recover password/view/recover_password_view.dart';
 import '../../../register/view/widget/my_input_text_field.dart';
 
@@ -45,7 +45,7 @@ class LoginViewBody extends StatelessWidget {
           } else if (state is LoginSuccessState ||
               state is LoginWithGoogleSuccessState) {
             myPushReplacmentNavigator(
-                context: context, destination: const HomeView());
+                context: context, destination: const MainPage());
           }
         },
         builder: (context, state) {

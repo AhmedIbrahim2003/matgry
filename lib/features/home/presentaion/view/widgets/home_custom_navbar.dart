@@ -9,8 +9,8 @@ import 'package:matgry/features/home/presentaion/view%20model/home%20cubit/home_
 import '../../../../../gen/assets.gen.dart';
 import '../../view model/home cubit/home_states.dart';
 
-class CustomBottomNavBar extends StatelessWidget {
-  const CustomBottomNavBar({super.key});
+class HomeCustomNavBar extends StatelessWidget {
+  const HomeCustomNavBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class CustomBottomNavBar extends StatelessWidget {
     return BlocConsumer<HomeCubit, HomeStates>(
       listener: (context, state) {},
       builder: (context, state) {
-        return Container(
+        return SizedBox(
           height: 106,
           child: Stack(
             children: [
@@ -34,7 +34,7 @@ class CustomBottomNavBar extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 30,
+                bottom: 35,
                 left: 31,
                 child: GestureDetector(
                   onTap: () {
@@ -47,7 +47,7 @@ class CustomBottomNavBar extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 30,
+                bottom: 35,
                 left: 94,
                 child: GestureDetector(
                   onTap: () {
@@ -72,7 +72,7 @@ class CustomBottomNavBar extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 30,
+                bottom: 35,
                 right: 95,
                 child: GestureDetector(
                   onTap: () {
@@ -85,7 +85,7 @@ class CustomBottomNavBar extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: 30,
+                bottom: 35,
                 right: 31,
                 child: GestureDetector(
                   onTap: () {

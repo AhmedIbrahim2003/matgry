@@ -1,17 +1,20 @@
 // ignore_for_file: file_names
 
 import 'package:dio/dio.dart';
+import 'package:matgry/core/utils/cache_helper.dart';
 
 class DioHelper {
   static Dio? dio;
 
   static init() {
+    String token = CacheHelper.getData(key: 'token') ?? '';
     dio = Dio(BaseOptions(
         baseUrl: 'https://student.valuxapps.com/api/',
         receiveDataWhenStatusError: true,
         headers: {
           'Content-Type': 'application/json',
           'lang': 'en',
+          'Authorization': token,
         }));
   }
 

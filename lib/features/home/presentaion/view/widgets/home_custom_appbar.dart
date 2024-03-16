@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../../constant.dart';
 import '../../../../../gen/assets.gen.dart';
 
-AppBar customAppBar() {
+AppBar homeCustomAppBar() {
   return AppBar(
     backgroundColor: scaffoldGreyBackGround,
     elevation: 0,

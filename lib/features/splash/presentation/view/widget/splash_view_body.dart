@@ -1,6 +1,8 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, no_logic_in_create_state
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:matgry/core/utils/cache_helper.dart';
+import 'package:matgry/features/home/presentaion/view/main_page.dart';
 import 'package:sizer/sizer.dart';
 
 import 'package:matgry/features/auth/presentaion/register/view/register_view.dart';
@@ -23,6 +25,7 @@ class SplashViewBody extends StatefulWidget {
 
 class _SplashViewBodyState extends State<SplashViewBody> {
   final bool showOnboarding;
+  bool showAuth = CacheHelper.getData(key: 'token') == null ? true : false;
 
   _SplashViewBodyState(this.showOnboarding);
   @override
@@ -33,8 +36,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       () {
         myPushReplacmentNavigator(
           context: context,
-          destination:
-              showOnboarding ? const OnBoardingView() : const RegisterView(),
+          destination: showOnboarding
+              ? const OnBoardingView()
+              : showAuth
+                  ? const RegisterView()
+                  : const MainPage(),
         );
       },
     );

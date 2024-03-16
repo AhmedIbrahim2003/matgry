@@ -6,61 +6,83 @@ import 'package:matgry/gen/assets.gen.dart';
 import 'package:matgry/gen/fonts.gen.dart';
 
 import '../../../../../constant.dart';
+import '../../../../../core/shared/widgets/shoes_photo_widget.dart';
+import '../../../../home/model/home_model/product_model.dart';
 import 'details_custom_appbar.dart';
 import 'other_items.dart';
-import 'shoes_photo.dart';
-import 'shoes_title.dart';
+import 'item_title.dart';
 
-class ItemDetailsBody extends StatelessWidget {
-  const ItemDetailsBody({super.key});
+class ItemDetailsBody extends StatefulWidget {
+  const ItemDetailsBody({super.key, required this.product});
+  final ProductModel product;
 
+  @override
+  State<ItemDetailsBody> createState() => _ItemDetailsBodyState();
+}
+
+class _ItemDetailsBodyState extends State<ItemDetailsBody> {
+  bool showMore = false;
+  
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
+      child: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          children: [
-            const CustomDetailsAppBar(),
-            const SizedBox(height: 15),
-            const ShoesTitle(),
-            const Stack(
-              alignment: Alignment.bottomCenter,
-              children: [
-                ShoesPhoto(),
-                Positioned(
-                  bottom: 50,
-                  left: 3,
-                  child: OtherProducts(),
-                ),
-              ],
-            ),
-            const Text(
-              'The Max Air 270 unit delivers unrivaled, all-day comfort. The sleek, running-inspired design roots you to everything Nike The Max Air 270 unit delivers unrivaled, all-day comfort. The sleek, running-inspired design roots you to everything Nike',
-              style: TextStyle(
-                fontFamily: FontFamily.poppins,
-                color: Color(0xff707B81),
-                overflow: TextOverflow.ellipsis,
+        physics: const BouncingScrollPhysics(),
+        children: [
+          const CustomDetailsAppBar(),
+          const SizedBox(height: 15),
+          ItemTitle(product: widget.product),
+          Column(
+            children: [
+              ShoesPhotoWidget(
+                photoPath: widget.product.image!,
+                width: 260,
+                height: 280,
+                padding: const EdgeInsets.only(bottom: 20),
               ),
-              maxLines: 3,
+              OtherProducts(
+                product: widget.product,
+              ),
+            ],
+          ),
+          const SizedBox(height: 15),
+          const Text(
+            'Description:',
+            style: TextStyle(
+              fontFamily: FontFamily.raleway,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
             ),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Read More',
-                  style: TextStyle(
-                    color: blueColor,
-                    fontFamily: FontFamily.poppins,
-                    fontWeight: FontWeight.w400,
-                  ),
+          ),
+          Text(
+            widget.product.description!,
+            style: const TextStyle(
+              fontFamily: FontFamily.poppins,
+              color: Color(0xff707B81),
+              overflow: TextOverflow.ellipsis,
+            ),
+            maxLines: showMore ? 250 : 3,
+          ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: TextButton(
+              onPressed: () {
+                setState(() {
+                  showMore = !showMore;
+                });
+              },
+              child: Text(
+                showMore ? 'Show Less' : 'Show More',
+                style: TextStyle(
+                  color: blueColor,
+                  fontFamily: FontFamily.poppins,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
             ),
-            const Spacer(),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:matgry/constant.dart';
+import 'package:matgry/features/home/model/home_model/product_model.dart';
 
 import '../../../../../gen/fonts.gen.dart';
-import 'popular_shoes_item_card.dart';
+import 'popular_items_card.dart';
 
-class PopularShoes extends StatelessWidget {
-  const PopularShoes({super.key});
+class PopularItems extends StatelessWidget {
+  const PopularItems({super.key, required this.products});
+  final List<ProductModel> products;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class PopularShoes extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text(
-                    'Popular Shoes',
+                    'Popular Products',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 16,
@@ -53,9 +55,9 @@ class PopularShoes extends StatelessWidget {
                   mainAxisSpacing: 20,
                   childAspectRatio: 2 / 2.4,
                 ),
-                itemCount: 9,
+                itemCount: products.length,
                 itemBuilder: (context, index) {
-                  return const ItemCard();
+                  return PopularItemsCart(product: products[index],);
                 },
               )
             ],

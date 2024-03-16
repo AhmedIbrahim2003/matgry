@@ -7,7 +7,8 @@ class HomeModel {
     this.data,
   });
   HomeModel.fromJson(Map<String, dynamic> json) {
-    data = json['data'] == null ? null : DataModel.fromJson(json['data'] as Map<String,dynamic>);
+    data = json['data'] == null
+        ? null
+        : DataModel.fromJson(json['data'] as Map<String, dynamic>);
   }
-  
 }

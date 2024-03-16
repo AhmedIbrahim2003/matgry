@@ -51,6 +51,9 @@ class $AssetsImagesHomeGen {
   /// File path: assets/images/home/favoriteicon.svg
   String get favoriteicon => 'assets/images/home/favoriteicon.svg';
 
+  /// File path: assets/images/home/favoriteiconfilled.svg
+  String get favoriteiconfilled => 'assets/images/home/favoriteiconfilled.svg';
+
   /// File path: assets/images/home/homeicon.svg
   String get homeicon => 'assets/images/home/homeicon.svg';
 
@@ -83,6 +86,7 @@ class $AssetsImagesHomeGen {
         bottomnav,
         cartlogo,
         favoriteicon,
+        favoriteiconfilled,
         homeicon,
         nikeshoes1,
         notificationicon,
