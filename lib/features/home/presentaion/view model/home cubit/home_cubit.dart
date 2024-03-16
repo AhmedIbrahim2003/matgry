@@ -61,12 +61,18 @@ class HomeCubit extends Cubit<HomeStates> {
       emit(ChangeFavoriteErrorState(error: e));
     });
   }
+
+    bool checkCart = false;
+
   void addOrRemoveFromCart({required int productID}) {
     DioHelper.postData(
       url: endPoints.cart,
       data: {'product_id': productID},
-    ).then((value) {}).catchError((e) {
-      emit(ChangeFavoriteErrorState(error: e));
+    ).then((value) {
+      checkCart = true;
+      emit(ChangeCartSuccessState());
+    }).catchError((e) {
+      emit(ChangeCartErrorState(error: e));
     });
   }
 }

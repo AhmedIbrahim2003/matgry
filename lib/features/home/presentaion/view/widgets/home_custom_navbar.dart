@@ -65,9 +65,38 @@ class HomeCustomNavBar extends StatelessWidget {
                 child: FloatingActionButton(
                   onPressed: () {},
                   backgroundColor: blueColor,
-                  child: SvgPicture.asset(
-                    Assets.images.home.cartlogo,
-                    color: Colors.white,
+                  child: Stack(
+                    children: [
+                      SvgPicture.asset(
+                        Assets.images.home.cartlogo,
+                        color: Colors.white,
+                      ),
+                      HomeCubit.get(context).checkCart
+                          ? Positioned(
+                              top: 3,
+                              right: 1,
+                              child: Container(
+                                width: 8,
+                                height: 8,
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.red,
+                                ),
+                              ),
+                            )
+                          : Positioned(
+                              top: 3,
+                              right: 1,
+                              child: Container(
+                                width: 8,
+                                height: 8,
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.transparent,
+                                ),
+                              ),
+                            )
+                    ],
                   ),
                 ),
               ),

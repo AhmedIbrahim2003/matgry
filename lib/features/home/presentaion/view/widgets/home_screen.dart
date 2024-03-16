@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
           );
         } else {
           return Scaffold(
-            appBar: homeCustomAppBar(),
+            appBar: homeCustomAppBar(cubit.checkCart),
             body: CustomScrollView(
               physics: const BouncingScrollPhysics(),
               slivers: [

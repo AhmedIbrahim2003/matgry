@@ -12,7 +12,7 @@ class ItemDetails extends StatelessWidget {
     return Scaffold(
       backgroundColor: scaffoldGreyBackGround,
       body: ItemDetailsBody(product: product),
-      bottomNavigationBar: ItemDetailsBottom(),
+      bottomNavigationBar: const ItemDetailsBottom(),
     );
   }
 }

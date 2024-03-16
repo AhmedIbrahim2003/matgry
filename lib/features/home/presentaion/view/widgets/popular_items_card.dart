@@ -30,6 +30,7 @@ class _PopularItemsCartState extends State<PopularItemsCart> {
   @override
   Widget build(BuildContext context) {
     var cubit = HomeCubit.get(context);
+
     return BlocConsumer<HomeCubit, HomeStates>(
       listener: (context, state) {},
       builder: (context, state) {
@@ -63,10 +64,13 @@ class _PopularItemsCartState extends State<PopularItemsCart> {
                   ),
                   Align(
                     alignment: Alignment.center,
-                    child: ShoesPhotoWidget(
-                        photoPath: widget.product.image!,
-                        height: 74,
-                        padding: const EdgeInsets.only(right: 16)),
+                    child: Hero(
+                      tag: 'ProductPhoto',
+                      child: ShoesPhotoWidget(
+                          photoPath: widget.product.image!,
+                          height: 74,
+                          padding: const EdgeInsets.only(right: 16)),
+                    ),
                   ),
                   const SizedBox(height: 12),
                   Stack(
@@ -119,9 +123,6 @@ class _PopularItemsCartState extends State<PopularItemsCart> {
                         child: GestureDetector(
                           onTap: () {
                             cubit.addOrRemoveFromCart(productID: product.id!);
-                            setState(() {
-                              product.inCart = !product.inCart!;
-                            });
                           },
                           child: Container(
                             decoration: BoxDecoration(
@@ -131,9 +132,9 @@ class _PopularItemsCartState extends State<PopularItemsCart> {
                               ),
                               color: blueColor,
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Icon(
-                                product.inCart! ? Icons.done : Icons.add,
+                                Icons.add,
                                 color: Colors.white,
                                 size: 40,
                               ),

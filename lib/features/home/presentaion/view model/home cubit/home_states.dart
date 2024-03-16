@@ -33,3 +33,10 @@ class GetCategoriesDataErrorState extends ErrorState {
 class ChangeFavoriteErrorState extends ErrorState {
   ChangeFavoriteErrorState({required super.error});
 }
+
+class ChangeCartSuccessState extends HomeStates {}
+
+class ChangeCartErrorState extends ErrorState {
+  ChangeCartErrorState({required super.error});
+}
+

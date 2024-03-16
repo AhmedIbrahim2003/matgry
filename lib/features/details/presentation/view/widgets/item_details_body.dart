@@ -22,7 +22,7 @@ class ItemDetailsBody extends StatefulWidget {
 
 class _ItemDetailsBodyState extends State<ItemDetailsBody> {
   bool showMore = false;
-  
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -35,11 +35,14 @@ class _ItemDetailsBodyState extends State<ItemDetailsBody> {
           ItemTitle(product: widget.product),
           Column(
             children: [
-              ShoesPhotoWidget(
-                photoPath: widget.product.image!,
-                width: 260,
-                height: 280,
-                padding: const EdgeInsets.only(bottom: 20),
+              Hero(
+                tag: 'ProductPhoto',
+                child: ShoesPhotoWidget(
+                  photoPath: widget.product.image!,
+                  width: 260,
+                  height: 280,
+                  padding: const EdgeInsets.only(bottom: 20),
+                ),
               ),
               OtherProducts(
                 product: widget.product,
