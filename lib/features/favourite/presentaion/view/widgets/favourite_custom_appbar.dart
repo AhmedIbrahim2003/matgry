@@ -31,16 +31,6 @@ class CustomFavouriteAppBar extends StatelessWidget {
             ),
           ),
         ),
-        const Text(
-          'Favourite',
-          style: TextStyle(
-            color: Color(0xFF2B2B2B),
-            fontSize: 16,
-            fontFamily: 'Raleway',
-            fontWeight: FontWeight.w600,
-          ),
-          textAlign: TextAlign.center,
-        ),
         Container(
           width: 44,
           height: 44,
@@ -55,4 +45,22 @@ class CustomFavouriteAppBar extends StatelessWidget {
       ],
     );
   }
+}
+
+AppBar favouriteCustomeAppbar() {
+  return AppBar(
+    backgroundColor: scaffoldGreyBackGround,
+    elevation: 0,
+    centerTitle: true,
+    title: const Text(
+      'Favourite',
+      style: TextStyle(
+        color: Color(0xFF2B2B2B),
+        fontSize: 16,
+        fontFamily: 'Raleway',
+        fontWeight: FontWeight.w600,
+      ),
+      textAlign: TextAlign.center,
+    ),
+  );
 }
