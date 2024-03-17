@@ -10,8 +10,19 @@ import 'home_custom_search_bar.dart';
 import 'new_arrivals.dart';
 import 'popular_items.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    HomeCubit.get(context).getHomeFullData();
+  }
 
   @override
   Widget build(BuildContext context) {
