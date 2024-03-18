@@ -43,6 +43,7 @@ flutter:
     - assets/images/auth/
     - assets/images/home/
     - assets/images/details/
+    - assets/images/notification/
 
   fonts:
     - family: Raleway

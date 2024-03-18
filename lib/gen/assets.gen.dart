@@ -18,6 +18,8 @@ class $AssetsImagesGen {
   /// File path: assets/images/nikeLogo.svg
   String get nikeLogo => 'assets/images/nikeLogo.svg';
 
+  $AssetsImagesNotificationGen get notification =>
+      const $AssetsImagesNotificationGen();
   $AssetsImagesOnboardingGen get onboarding =>
       const $AssetsImagesOnboardingGen();
 
@@ -96,6 +98,16 @@ class $AssetsImagesHomeGen {
         shoesBannerSVG,
         sortingicon
       ];
+}
+
+class $AssetsImagesNotificationGen {
+  const $AssetsImagesNotificationGen();
+
+  /// File path: assets/images/notification/noNotification.svg
+  String get noNotification => 'assets/images/notification/noNotification.svg';
+
+  /// List of all assets
+  List<String> get values => [noNotification];
 }
 
 class $AssetsImagesOnboardingGen {
