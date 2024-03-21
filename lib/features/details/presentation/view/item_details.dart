@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:matgry/features/home/model/home_model/product_model.dart';
+import 'package:matgry/features/home/data/model/home_model/product_model.dart';
 
 import '../../../../constant.dart';
 import 'widgets/item_details_body.dart';

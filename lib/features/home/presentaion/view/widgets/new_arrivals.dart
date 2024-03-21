@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:card_loading/card_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:matgry/features/home/model/home_model/banner_model.dart';
+import 'package:matgry/features/home/data/model/home_model/banner_model.dart';
 
 import '../../../../../constant.dart';
 import '../../../../../gen/fonts.gen.dart';

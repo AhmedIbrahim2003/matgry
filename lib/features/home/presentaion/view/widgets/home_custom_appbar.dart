@@ -3,8 +3,9 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../../constant.dart';
 import '../../../../../gen/assets.gen.dart';
+import '../../../../cart/presentation/view/cart_screen.dart';
 
-AppBar homeCustomAppBar(bool checkCart) {
+AppBar homeCustomAppBar(bool checkCart,BuildContext context) {
   return AppBar(
     backgroundColor: scaffoldGreyBackGround,
     elevation: 0,
@@ -47,44 +48,49 @@ AppBar homeCustomAppBar(bool checkCart) {
     actions: [
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 5),
-        child: Container(
-          width: 44,
-          height: 44,
-          padding: const EdgeInsets.all(10),
-          decoration: const ShapeDecoration(
-            color: Colors.white,
-            shape: CircleBorder(),
-          ),
-          child: Center(
-            child: Stack(
-              children: [
-                SvgPicture.asset(Assets.images.home.cartlogo),
-                checkCart
-                    ? Positioned(
-                        top: 3,
-                        right: 1,
-                        child: Container(
-                          width: 8,
-                          height: 8,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.red,
+        child: GestureDetector(
+          onTap: () {
+            myPushNavigator(context: context, destination: CartScreen());
+          },
+          child: Container(
+            width: 44,
+            height: 44,
+            padding: const EdgeInsets.all(10),
+            decoration: const ShapeDecoration(
+              color: Colors.white,
+              shape: CircleBorder(),
+            ),
+            child: Center(
+              child: Stack(
+                children: [
+                  SvgPicture.asset(Assets.images.home.cartlogo),
+                  checkCart
+                      ? Positioned(
+                          top: 3,
+                          right: 1,
+                          child: Container(
+                            width: 8,
+                            height: 8,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.red,
+                            ),
                           ),
-                        ),
-                      )
-                    : Positioned(
-                        top: 3,
-                        right: 1,
-                        child: Container(
-                          width: 8,
-                          height: 8,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.transparent,
+                        )
+                      : Positioned(
+                          top: 3,
+                          right: 1,
+                          child: Container(
+                            width: 8,
+                            height: 8,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.transparent,
+                            ),
                           ),
-                        ),
-                      )
-              ],
+                        )
+                ],
+              ),
             ),
           ),
         ),

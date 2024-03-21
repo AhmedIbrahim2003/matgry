@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:matgry/features/home/model/home_model/product_model.dart';
+import 'package:matgry/features/home/data/model/home_model/product_model.dart';
 import 'package:matgry/features/home/presentaion/view%20model/home%20cubit/home_cubit.dart';
 import 'package:matgry/features/home/presentaion/view%20model/home%20cubit/home_states.dart';
 import 'package:overflow_text_animated/overflow_text_animated.dart';
@@ -64,13 +64,10 @@ class _PopularItemsCartState extends State<PopularItemsCart> {
                   ),
                   Align(
                     alignment: Alignment.center,
-                    child: Hero(
-                      tag: 'ProductPhoto',
-                      child: ShoesPhotoWidget(
-                          photoPath: widget.product.image!,
-                          height: 74,
-                          padding: const EdgeInsets.only(right: 16)),
-                    ),
+                    child: ShoesPhotoWidget(
+                        photoPath: widget.product.image!,
+                        height: 74,
+                        padding: const EdgeInsets.only(right: 16)),
                   ),
                   const SizedBox(height: 12),
                   Stack(

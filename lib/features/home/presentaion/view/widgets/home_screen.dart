@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
           );
         } else {
           return Scaffold(
-            appBar: homeCustomAppBar(cubit.checkCart),
+            appBar: homeCustomAppBar(cubit.checkCart, context),
             body: CustomScrollView(
               physics: const BouncingScrollPhysics(),
               slivers: [

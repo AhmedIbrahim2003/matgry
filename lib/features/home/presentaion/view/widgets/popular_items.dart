@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:matgry/constant.dart';
-import 'package:matgry/features/home/model/home_model/product_model.dart';
+import 'package:matgry/features/home/data/model/home_model/product_model.dart';
 
 import '../../../../../gen/fonts.gen.dart';
 import 'popular_items_card.dart';

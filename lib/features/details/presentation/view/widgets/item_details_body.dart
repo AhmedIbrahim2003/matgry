@@ -7,7 +7,7 @@ import 'package:matgry/gen/fonts.gen.dart';
 
 import '../../../../../constant.dart';
 import '../../../../../core/shared/widgets/shoes_photo_widget.dart';
-import '../../../../home/model/home_model/product_model.dart';
+import '../../../../home/data/model/home_model/product_model.dart';
 import 'details_custom_appbar.dart';
 import 'other_items.dart';
 import 'item_title.dart';
@@ -35,14 +35,11 @@ class _ItemDetailsBodyState extends State<ItemDetailsBody> {
           ItemTitle(product: widget.product),
           Column(
             children: [
-              Hero(
-                tag: 'ProductPhoto',
-                child: ShoesPhotoWidget(
-                  photoPath: widget.product.image!,
-                  width: 260,
-                  height: 280,
-                  padding: const EdgeInsets.only(bottom: 20),
-                ),
+              ShoesPhotoWidget(
+                photoPath: widget.product.image!,
+                width: 260,
+                height: 280,
+                padding: const EdgeInsets.only(bottom: 20),
               ),
               OtherProducts(
                 product: widget.product,

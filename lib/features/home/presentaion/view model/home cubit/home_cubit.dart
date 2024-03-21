@@ -6,8 +6,8 @@ import 'package:matgry/features/home/presentaion/view/widgets/home_screen.dart';
 
 import '../../../../../core/utils/end_points.dart';
 import '../../../../notification/presentation/view/notification_screen.dart';
-import '../../../model/categories_model/categories/categories_model.dart';
-import '../../../model/home_model/home_data_model.dart';
+import '../../../data/model/categories_model/categories/categories_model.dart';
+import '../../../data/model/home_model/home_data_model.dart';
 import 'home_states.dart';
 
 class HomeCubit extends Cubit<HomeStates> {

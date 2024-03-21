@@ -3,7 +3,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../../../gen/fonts.gen.dart';
-import '../../../../home/model/home_model/product_model.dart';
+import '../../../../home/data/model/home_model/product_model.dart';
 
 class ItemTitle extends StatelessWidget {
   const ItemTitle({super.key, required this.product});

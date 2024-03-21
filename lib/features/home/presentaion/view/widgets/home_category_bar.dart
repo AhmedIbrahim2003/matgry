@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:matgry/constant.dart';
-import 'package:matgry/features/home/model/categories_model/categories/datum.dart';
+import 'package:matgry/features/home/data/model/categories_model/categories/datum.dart';
 
 class HomeCategoryBar extends StatefulWidget {
   const HomeCategoryBar({super.key, required this.categories});

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:matgry/constant.dart';
+import 'package:matgry/features/cart/presentation/view/cart_screen.dart';
 import 'package:matgry/features/home/presentaion/view%20model/home%20cubit/home_cubit.dart';
 
 import '../../../../../gen/assets.gen.dart';
@@ -63,7 +64,9 @@ class HomeCustomNavBar extends StatelessWidget {
                 bottom: 50,
                 left: 169,
                 child: FloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    myPushNavigator(context: context, destination: const CartScreen());
+                  },
                   backgroundColor: blueColor,
                   child: Stack(
                     children: [

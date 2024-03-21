@@ -1,6 +1,6 @@
 import 'package:easy_image_viewer/easy_image_viewer.dart';
 import 'package:flutter/material.dart';
-import 'package:matgry/features/home/model/home_model/product_model.dart';
+import 'package:matgry/features/home/data/model/home_model/product_model.dart';
 
 import '../../../../../core/shared/widgets/shoes_photo_widget.dart';
 
